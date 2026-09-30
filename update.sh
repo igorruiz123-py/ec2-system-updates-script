@@ -17,7 +17,7 @@ JSON_MESSAGE=$(cat <<EOF
 EOF
 )
 
-if sudo apt update && sudo apt upgrade ; then
+if sudo DEBIAN_FRONTEND=noninteractive apt update && sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y ; then
 
     echo "[INFO] crontab executed: system updated successfully." >> $LOG_FILE_PATH
 
