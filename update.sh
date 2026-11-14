@@ -11,6 +11,7 @@ OS=$(hostnamectl | grep "Operating System" | cut -d: -f2-)
 JSON_MESSAGE=$(cat <<EOF
 
     {
+        "alarm_id": "system_updates_alarm",
         "hostname": "$HOSTNAME",
         "OS": "$OS"
     }
